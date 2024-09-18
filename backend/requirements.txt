@@ -1,0 +1,17 @@
+autopep8
+cryptography
+django-cors-headers
+django-crispy-forms
+django-environ
+django-ndarray
+djangorestframework
+geopy
+mysqlclient
+pillow
+pip-chill
+pyjwt
+python-dateutil
+qrcode
+speech-recognition-python
+speechrecognition
+face-recognition

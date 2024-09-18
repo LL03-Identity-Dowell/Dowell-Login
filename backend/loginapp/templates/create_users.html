@@ -1,0 +1,39 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<br><br>
+<center>
+    <div class="content1 col-md-4 bg-light" style="display: block;">
+        <div class="row">
+            <div class="col-md-12">
+        <h3 class="text-light">Create Users</h3>
+<form class="form-inline" method="POST">
+    {% csrf_token %}
+    <!--<input type="hidden" name="csrfmiddlewaretoken" value="V6JkqAphX9obGyazVPOvzph0eLkxk4gW4Oi9DxVGRWREriw7W5I6dkWNvfm48c89">-->
+         <div class="form-group col-md-8">
+             <label for="user" class="" style="float:left">Number of Users</label>
+         <input type="number" name="user_number" id="user_number" class="form-control col-md-4" placeholder="Number of Users"></div>
+        <!-- <div class="form-group col-md-8">-->
+        <!--     <label for="role" class="" style="float:left">Role</label>-->
+        <!--<select name="role" id="role" class="form-control">-->
+        <!--            <option value="TeamMember">Team Member</option>-->
+        <!--            <option value="Freelancer" selected="">Freelancer</option>-->
+        <!--          </select></div>-->
+        <!-- <div class="form-group col-md-8">-->
+        <!--     <label for="teamcode" class="" style="float:left">Team Code</label>-->
+        <!-- <input type="text" name="teamcode" id="teamcode" class="form-control col-md-4" placeholder="Team Code" required=""></div>-->
+        <!-- <div class="form-group col-md-8 mb-3">-->
+        <!--     <label for="qty" class="" style="float:left">Number of Users</label>-->
+        <!-- <input type="number" name="qty" id="qty" class="form-control col-md-4" placeholder="qty" required=""></div>-->
+         <br>
+         <input type="submit" class="btn btn-success mb-5" value="Create">
+
+
+
+</form>
+<span>{{msg}}</span>
+</div>
+    </div>
+    </div>
+</center>

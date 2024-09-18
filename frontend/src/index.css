@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .label {
+    @apply block text-base font-medium leading-6 text-green-700;
+  }
+  .btn-send {
+    @apply inline-block self-end border border-transparent rounded bg-green-500 px-6 py-1.5 md:py-2 md:px-8 text-base font-bold text-white shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2;
+  }
+  .select-btn {
+    @apply block w-full rounded border-0 py-2.5 px-2 text-green-900 shadow-sm ring-1 ring-inset ring-green-300 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:max-w-xs sm:text-sm sm:leading-6;
+  }
+
+  .form-input {
+    @apply block w-full border border-spacing-1 border-slate-400 outline-none py-1.5 px-2 text-gray-700 shadow-sm ring-1 ring-gray-300
+    placeholder:text-gray-400 sm:text-sm sm:leading-6 focus:ring-2;
+  }
+  .input-field {
+    @apply block w-11/12 rounded-sm border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-green-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-400 sm:text-sm sm:leading-6;
+  }
+  .submit-btn {
+    @apply block  w-11/12  rounded-md bg-green-300 px-3.5 py-2.5 text-center font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700;
+  }
+}
+.timerText {
+  text-align: center;
+  color: green;
+}
+.locationText {
+  text-align: center;
+}
+@keyframes bannerMotion {
+  to {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.locationBanner {
+  background-color: rgb(59, 57, 57);
+  color: white;
+  width: 500px;
+  padding: 40px;
+  margin: 25px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 649;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  /* transition: 0.9s ease-in-out; */
+  animation: bannerMotion 0.9s alternate-reverse;
+  box-shadow: 0 18px 22px 0 rgba(0, 0, 0, 0.2),
+    0 20px 34px 0 rgba(0, 0, 0, 0.19);
+}
+
+.underlineText {
+  text-decoration: underline;
+}
+
+.smallText {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 200;
+}
+.fireFoxBox {
+  margin: 4px auto;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: small;
+}
+.firefoxCheckbox {
+  margin-right: 4px;
+}
+.boldText {
+  font-weight: bold;
+}
+.cameraContainer {
+  position: relative;
+  width: 320;
+  height: 240;
+}
+.ovalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: radial-gradient(40% 70% at 50% 50%, transparent 50%, black 50%);
+  opacity: 0.6;
+}
+
+.tabContainer {
+  height: 434px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: orange transparent;
+  animation: spin 1s infinite ease-out;
+}
+.errorMessage {
+  color: red;
+  font-size: 24px;
+}
+.mediaplayer {
+  width: 440px;
+  margin: 16px;
+}
+.audioPlayer {
+  height: 100px;
+  width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smscontainer {
+  display: flex;
+}
+.smsTimerDiv {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.smsTimerDiv:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltiptext {
+  visibility: hidden;
+  background-color: rgb(68, 199, 68);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 25px;
+  margin-right: 4px;
+  font-size: medium;
+  position: absolute;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgb(86, 216, 86) transparent transparent;
+}
+.policyFrame {
+  display: block;
+  width: calc(100% * 11 / 12);
+  border-radius: 4px;
+  padding: 3px;
+  border: thin solid rgb(10, 131, 3);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+.policyLink {
+  color: dodgerblue;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.displayed {
+  display: block;
+}
+.notDisplayed {
+  display: none;
+}
+.policyFrameSpinner {
+  display: block;
+  width: calc(100% * 11 / 12);
+  border-radius: 4px;
+  border: thin solid white;
+  margin: 0 5px 0 0;
+  max-width: 500px;
+}
+.iframespinner {
+  position: absolute;
+  padding-top: 80px;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.loginiframespinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.policyFrameSpinner .iframespinner {
+  width: inherit;
+}
+@media only screen and (max-width: 430px) {
+  .locationBanner {
+    padding: 32px;
+  }
+  .iframespinner {
+    padding-right: 45px;
+  }
+  .samantasIframe {
+    width: 250px;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.samantaContainer {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  right: 5%;
+}
+.samantaContainerhidden {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 80%;
+  right: 5%;
+  visibility: hidden;
+}
+.samantaImage {
+  position: absolute;
+  cursor: pointer;
+}
+.SamantaTooltip {
+  background: #2e7d32;
+  color: white;
+  float: right;
+  width: 220px;
+  height: auto;
+  text-align: center;
+  margin-right: 90px;
+  margin-top: 32px;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  animation: anime 3s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+.tooltipText {
+  width: 220px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 4px;
+  animation: anime 3s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+@keyframes anime {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 55px;
+  }
+  50% {
+    width: 110px;
+  }
+  75% {
+    width: 165px;
+  }
+  100% {
+    width: 220px;
+  }
+}
+.SamantaTooltip::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  border-style: solid;
+  border-width: 8px;
+  margin-top: -6px;
+  border-color: transparent transparent transparent #2e7d32;
+  animation: borderanime 3s linear 4s 1 both;
+}
+@keyframes borderanime {
+  0% {
+    border-width: 0;
+    margin-top: 2px;
+  }
+  25% {
+    border-width: 2px;
+    margin-top: 0;
+  }
+  50% {
+    border-width: 4px;
+    margin-top: -2px;
+  }
+  75% {
+    border-width: 6px;
+    margin-top: -4px;
+  }
+  100% {
+    border-width: 8px;
+    margin-top: -6px;
+  }
+}
+.SamantaMessageIcon {
+  width: 60px;
+  height: 60px;
+  background: #4ade80;
+  border-radius: 50%;
+  margin-top: 99px;
+  margin-left: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SamantaMessageIcon:hover {
+  background: #2e7d32;
+  cursor: pointer;
+}
+.samantasIframe {
+  background: white;
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  margin-left: -290px;
+  margin-top: -250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 8px 12px 0 rgba(0, 0, 0, 0.29);
+}
+@media only screen and (max-width: 410px) {
+  .samantasIframe {
+    width: 240px;
+    height: 300px;
+    margin-left: -230px;
+    margin-top: -150px;
+    background: white;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .samantasIframe {
+    width: 180px;
+    height: 260px;
+    margin-left: -160px;
+    margin-top: -150px;
+    background: white;
+  }
+  .SamantaTooltip {
+    width: 160px;
+    height: 60px;
+    animation: none;
+  }
+  .tooltipText {
+    height: auto;
+  }
+}
+.closeContainer {
+  float: right;
+  margin: 8px;
+  cursor: pointer;
+}
+.loginchatContainer {
+  width: 95%;
+  height: 90%;
+  display: block;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+.loginchatFrame {
+  width: 99%;
+  height: 96%;
+}
+.signUpImageHolder {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+.signUpIconContainer {
+  background-color: black;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singUpImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}

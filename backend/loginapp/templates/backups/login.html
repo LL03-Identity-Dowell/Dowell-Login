@@ -1,0 +1,382 @@
+{%load static%}
+{% load i18n%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dowell UX Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="{% static 'css/styles.css'%}" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  </head>
+  <style>
+  
+  </style>
+  <body>
+    <center><div class="loaderDiv" id="loaderDiv" style="margin-top:200px;display:none; height: 200px;width: 100px; background-image: url('https://100014.pythonanywhere.com/static/img/loading-gif.gif');background-repeat: no-repeat;background-position: center;background-size: 100%;">
+      <p id="timer" style="display:none;position:absolute; margin-top: 91px;margin-left:30px;font-size:15px;">00:00</p>
+    </div>
+    <iframe style="border:none;height:200px;display: none;" id="status" src="about:blank">Hello</iframe></center>
+
+    <div id="mainpart" class="container-fluid mt-5" style="top:50%">
+        <div class="row">
+            <div class="col-sm-0 col-md-1 col-xs-0 col-lg-3"></div>
+            <div class="col-sm-12 col-md-10 col-xs-12 col-lg-6">
+                <div class="card mb-3 border-0">
+                    <div class="row mainCol g-0">
+                      <div class="col-md-2 col-sm-12 col-lg-2 firstImage">
+                        <img src="{% static 'img/true_moments.webp'%}" class="img-fluid rounded-start leftImage" alt="Dowell UX Living Lab Login">
+                      </div>
+                      <div class="col-md-10 col-sm-12 col-lg-10" id="rightCard">
+                        <div class="card-head p-3" id="navBar">
+                            <div class="nav nav-pills row" id="pills-tab" role="tablist">
+                              <!-- <li class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></li> -->
+                                <li class="ps-0 pe-0  col-lg-2 col-md-2 col-sm-12 col-xs-12" role="presentation">
+                                  <button class="navBtn" id="pills-chat-tab" data-bs-toggle="pill" data-bs-target="#pills-chat" type="button" role="tab" aria-controls="pills-chat" aria-selected="true"><i class="fas fa-headset me-2"></i>Chat</button>
+                                </li>
+                                <li class="ps-0 pe-0 col-lg-3 col-md-3 col-sm-12 col-xs-12" role="presentation">
+                                  <button class="navBtn"  id="pills-policy-tab" data-bs-toggle="pill" data-bs-target="#pills-policy" type="button" role="tab" aria-controls="pills-policy" aria-selected="false"><i class="fas fa-shield-alt me-2"></i>Policy</button>
+                                </li>
+                                <li class="ps-0 pe-0 col-lg-2 col-md-2 col-sm-12 col-xs-12" role="presentation">
+                                  <button class="navBtn" id="pills-help-tab" data-bs-toggle="pill" data-bs-target="#pills-help" type="button" role="tab" aria-controls="pills-help" aria-selected="false"><i class="fas fa-video me-2"></i>Help</button>
+                                </li>
+                                <li class="ps-0 pe-0 col-lg-2 col-md-2 col-sm-12 col-xs-12" role="presentation">
+                                  <button class="navBtn" id="pills-faq-tab" data-bs-toggle="pill" data-bs-target="#pills-faq" type="button" role="tab" aria-controls="pills-faq" aria-selected="false"><i class="fas fa-question-circle me-2"></i>F.A.Q</button>
+                                </li>
+                                <li class="ps-0 pe-0 col-lg-3 col-md-3 col-sm-12 col-xs-12" role="presentation">
+                                    <button class="navBtn active" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-login" aria-selected="false"><i class="fas fa-sign-in-alt me-2"></i>Login</button>
+                                </li>
+                                <!-- <li class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></li> -->
+
+                              </div>
+                        </div>
+                        <div class="card-body" id="cardBody">
+                            
+                              <div class="tab-content" id="pills-tabContent">
+                                <!-- chat content  -->
+                                <div class="tab-pane fade " id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab" tabindex="0">
+                                  <div class="alert alertBox fw-bold" role="alert">Chat with UX Living Lab</div>
+                                  <div class="chatBox">
+                                    <iframe src="https://100096.pythonanywhere.com/chat/login/?session_id={qrid_login}" id="pageEmbed" allow="fullscreen"></iframe>
+                                  </div>
+                                 
+                                </div>
+                                <!-- policy content  -->
+                                <div class="tab-pane fade" id="pills-policy" role="tabpanel" aria-labelledby="pills-policy-tab" tabindex="0">
+                                  <div class="alert alertBox fw-bold" role="alert">Legal, Privacy, Safety, Security Policies</div>
+                                  <div class="chatBox">
+                                    <iframe src="https://100087.pythonanywhere.com/legalpolicies/FB1010000000167475042357408025/website-privacy-policy/policies/?redirect_url=https://100014.pythonanywhere.com/legalpolicy1?s={{random_session}}&session_id={{random_session}}" id="pageEmbed" allow="fullscreen"></iframe>
+                                  </div>
+                                </div>
+
+                                <!-- help content  -->
+                                <div class="tab-pane fade" id="pills-help" role="tabpanel" aria-labelledby="pills-help-tab" tabindex="0">
+                                  <div class="alert alertBox fw-bold" role="alert">Watch a 2 minute video on UX living Lab</div>
+                                  <div class="ms-auto me-auto">
+                                    <iframe width="100%" height="251" src="https://www.youtube.com/embed/PSmX-A5Cn_E" title="UX Living Lab - Innovating from people&#39;s minds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                  </div>
+                                </div>
+                                <!-- faq content  -->
+                                <div class="tab-pane fade" id="pills-faq" role="tabpanel" aria-labelledby="pills-faq-tab" tabindex="0">
+                                 
+                                  <div class="alert alertBox fw-bold" role="alert">F.A.Q</div>
+                                  <div class="chatBox">
+                                    <iframe src="https://uxlivinglab.com/en/faq/" id="pageEmbed" allow="fullscreen"></iframe>
+                                  </div>
+                                  </div>
+                                <!-- login content  -->
+                                <div class="tab-pane active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab" tabindex="0">
+                                  <div class="container-fluid p-0 m-0">
+                                    <div class="row">
+                                      <div class="col-lg-5 col-xs-12 col-md-5 col-sm-12 leftBox bg-white p-3">
+                                        <div class="alert alertBox fw-bold memberBox ms-auto me-auto mt-3" role="alert">{% trans 'Member Login'%}</div>
+                                        <p class="formStyles mt-4"><i>{% trans 'Do not remember username or Password?'%}</i></p>
+                                        <a class="formStyles mt-5 linkStyles text-decoration-none" href="{% url 'forgot_password'%}"><i>{% trans 'Click here'%}</i></a>
+                                        <p class="mt-3 formStyles"><i>{% trans 'Do not have an account?'%}</i></p>
+                                        <a class="formStyles linkStyles text-decoration-none" href="" id="register"><i>{% trans 'Click here' %}</i></a>
+                                      </div>
+                                      <div class="col-lg-7 col-xs-12 col-md-7 col-sm-12 rightBox">
+                                        <!-- form  -->
+                                        <form method="post" id="login_main">
+                                          {% csrf_token %}
+                                          <label class="p-3 langLabel" for="language">{% trans 'Select your Language'%}</label>
+                                          <div class="box mb-2">
+                                            {% get_current_language as CURRENT_L %}
+                                          <select class="form-select" id="select_language">
+                                            {% get_available_languages as L %}
+                                            {% get_language_info_list for L as ls %}
+                                            {% for lang in ls %}
+                                            <option value="{{ lang.code}}" {% if lang.code == CURRENT_L %} selected {% endif %} >
+                                                {{lang.name_local}} ({{ lang.code}})
+                                            </option>
+                                            {% endfor %}
+                                          </select>
+                                          </div>
+                                          <input value="{{random_session}}"  name="random_session" hidden>
+                                          <input value="{{CURRENT_L}}"  name="language" hidden>
+                                          <input type="text" name="org" value="{{org}}" hidden>
+                                          <input type="text" name="type" value="{{type}}" hidden>
+                                          <input type="text" name="add_org" value="{{add_org}}" hidden>
+                                          <input type="text" id="mainparams" name="mainparams" value="" hidden>
+                                          <input type="text" name="dev" id="dev" hidden>
+                                          <input type="text" name="loc" id="loc" hidden>
+                                          <input type="text" name="os" id="os" hidden>
+                                          <input type="text" name="url" id="url" hidden>
+                                          <input type="text" name="zone" id="zone" hidden>
+                                          <input type="text" name="brow" id="brow" hidden>
+                                          <input type="text" name="time" id="time" hidden>
+                                          <input type="text" name="conn" id="conn" hidden>
+                                          <input type="text" name="ip" id="ip" hidden>
+                                          <div class="card formCard mt-2 p-3">
+                                            <div class="mb-1">
+                                              <label for="username" class="form-label mb-0">{% trans 'User Name'%}</label>
+                                              <input type="text" class="form-control" id="username" name="username" placeholder="{% trans 'Enter your user name'%}" required>
+                                            </div>
+                                            <div class="mb-1">
+                                              <label for="password" class="form-label mb-0">{% trans 'Password'%}</label>
+                                              <input type="password" class="form-control" id="password" name="password" placeholder="{% trans 'Enter password'%}" required>
+                                            </div>
+                                            <div class=" mb-1 col-12">
+                                              <button type="submit" id="loginBtn" class="btn btn-secondary loginBtn">{% trans 'Login'%}</button>
+                                            </div>
+                                            <center><span style="color:red;font-size:small">{{error}}</span></center>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-0 col-md-1 col-xs-0 col-lg-3"></div>
+        </div>
+    </div>
+      <script type="text/javascript">
+        var mainparams=""
+        var newvalue= "http://127.0.0.1:8000/register?"
+            let urlString = window.location.href;
+            let paramString = urlString.split('?')[1];
+            let queryString = new URLSearchParams(paramString);
+            for(let pair of queryString.entries()) {
+          mainparams=mainparams.concat(pair[0]);
+          mainparams=mainparams.concat("=",pair[1],"&");
+            }
+            document.getElementById("mainparams").value=mainparams;
+          document.getElementById("register").href=newvalue.concat(mainparams);
+            $('#select_language').on('change', function(){
+                window.location = '/'+$(this).val()+'?'+mainparams;
+            });
+            $('#login_main').on('submit', function(){
+             start();
+             username=document.getElementById("username").value;
+             document.getElementById("loaderDiv").style.display = "block";
+             document.getElementById("mainpart").style.display = "none";
+             document.getElementById("timer").style.display="block";
+             document.getElementById("status").style.display="block";
+         document.getElementById("status").src="http://127.0.0.1:8000/check_status?username="+username;
+    
+             });
+        </script>
+      <script>
+        var hour=0,sec=0,min=0;
+        var dispHour=0,dispMin=0,dispSec=0;
+        var timeoutId=null;
+        function timer(){
+          sec++;
+          if(sec/60==1){
+            min++;
+            sec=0;
+          if(min/60==1){
+            hour++;
+            min=0;
+          }}
+          if(sec<10){ dispSec="0"+sec.toString(); }
+            else{ dispSec=sec.toString(); }
+           if(min<10){ dispMin="0"+min.toString(); }
+           else{ dispMin=min.toString(); }
+           if(hour<10){ dispHour="0"+hour.toString(); }
+           else{ dispHour=hour.toString(); }
+          document.getElementById("timer").innerHTML=dispMin+":"+dispSec;
+        }
+        function start(){
+            timeoutId=window.setInterval(timer,1000);
+            }
+    </script>
+    <script>
+      $(document).ready(function(){
+      $("#policy").change(function(e){
+          if(this.checked) {
+        e.preventDefault();
+        $.ajax({
+            type : "POST",
+            url: "legalpolicy",
+            data: {
+            form:"policyform",
+            email1:$('#policy').val(),
+            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+            dataType: "json",
+            },
+            beforeSend: function() {
+        $('#image-container').css("display", "block");
+      },
+            success: function(data){
+            $('#image-container').css("display", "none");
+            $('#msg1').html("");
+            $('#msg1').html(data.msg);
+            },
+    
+            failure: function() {
+            $('#msg').html("Noo")
+            }});};    
+      });
+    });
+    </script>
+  <script>
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  value=url.searchParams.get("redirect_url")
+  console.log(value)
+  if (value== null){
+    document.getElementById("url").value ="None" ;
+  }else{
+    document.getElementById("url").value =value ;
+  }
+  </script>
+<script>
+  const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  document.getElementById("zone").value=zone;
+    var rtime;
+  rtime= new Date().toLocaleString();
+  document.getElementById("time").value=rtime;
+  (function () {
+      'use strict';
+
+      var module = {
+          options: [],
+          header: [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera],
+          dataos: [
+              { name: 'Windows Phone', value: 'Windows Phone', version: 'OS' },
+              { name: 'Windows', value: 'Win', version: 'NT' },
+              { name: 'iPhone', value: 'iPhone', version: 'OS' },
+              { name: 'iPad', value: 'iPad', version: 'OS' },
+              { name: 'Kindle', value: 'Silk', version: 'Silk' },
+              { name: 'Android', value: 'Android', version: 'Android' },
+              { name: 'PlayBook', value: 'PlayBook', version: 'OS' },
+              { name: 'BlackBerry', value: 'BlackBerry', version: '/' },
+              { name: 'Macintosh', value: 'Mac', version: 'OS X' },
+              { name: 'Linux', value: 'Linux', version: 'rv' },
+              { name: 'Palm', value: 'Palm', version: 'PalmOS' }
+          ],
+          databrowser: [
+              { name: 'Chrome', value: 'Chrome', version: 'Chrome' },
+              { name: 'Firefox', value: 'Firefox', version: 'Firefox' },
+              { name: 'Safari', value: 'Safari', version: 'Version' },
+              { name: 'Internet Explorer', value: 'MSIE', version: 'MSIE' },
+              { name: 'Opera', value: 'Opera', version: 'Opera' },
+              { name: 'BlackBerry', value: 'CLDC', version: 'CLDC' },
+              { name: 'Mozilla', value: 'Mozilla', version: 'Mozilla' }
+          ],
+          init: function () {
+              var agent = this.header.join(' '),
+                  os = this.matchItem(agent, this.dataos),
+                  browser = this.matchItem(agent, this.databrowser);
+
+              return { os: os, browser: browser };
+          },
+          matchItem: function (string, data) {
+              var i = 0,
+                  j = 0,
+                  html = '',
+                  regex,
+                  regexv,
+                  match,
+                  matches,
+                  version;
+
+              for (i = 0; i < data.length; i += 1) {
+                  regex = new RegExp(data[i].value, 'i');
+                  match = regex.test(string);
+                  if (match) {
+                      regexv = new RegExp(data[i].version + '[- /:;]([\\d._]+)', 'i');
+                      matches = string.match(regexv);
+                      version = '';
+                      if (matches) { if (matches[1]) { matches = matches[1]; } }
+                      if (matches) {
+                          matches = matches.split(/[._]+/);
+                          for (j = 0; j < matches.length; j += 1) {
+                              if (j === 0) {
+                                  version += matches[j] + '.';
+                              } else {
+                                  version += matches[j];
+                              }
+                          }
+                      } else {
+                          version = '0';
+                      }
+                      return {
+                          name: data[i].name,
+                          version: parseFloat(version)
+                      };
+                  }
+              }
+              return { name: 'unknown', version: 0 };
+          }
+      };
+
+      var e = module.init(),
+      osname = '',
+      browsername = '',
+      platform = '',
+      vendername = '';
+      osname=e.os.name + e.os.version
+      browsername=e.browser.name +e.browser.version
+      platform=navigator.platform
+      vendername=navigator.vendor
+
+      document.getElementById("os").value = osname;
+      document.getElementById("brow").value=browsername;
+  }());
+    let text = navigator.userAgent;
+    var mySubString = text.substring(
+        text.indexOf("(") + 1,
+        text.lastIndexOf(") A")
+    );
+    var str
+    r=mySubString.split(";")
+    if (r[2].length>4)
+    {
+      str=r[2]
+    }else{
+          str="could not get device name"
+    }
+    document.getElementById("dev").value = str;
+  </script>
+<script>
+            
+  var x = document.getElementById("loc");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      x.value = "Geolocation is not supported by this browser.";
+    }
+
+  function showPosition(position) {
+    x.value = position.coords.latitude +
+    " " + position.coords.longitude;
+  }
+  function getIP(json) {
+    document.getElementById("ip").value=json.ip
+  }
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  </body>
+</html>

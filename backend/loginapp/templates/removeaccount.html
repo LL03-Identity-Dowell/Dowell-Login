@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Dowell Login</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+
+		<style>
+			.forgot-password-inner {
+				padding-top: 50px;
+				width: 550px;
+				margin: 0 auto;
+			}
+            .forgot-password-inner .form-control{
+               border-color: #86efac;
+            }
+			.forgot-password-inner .form-control:focus {
+				outline: unset;
+				box-shadow: unset;
+				border-color: #71cb92;
+			}
+            .forgot-password-inner .btn:focus {
+				outline: unset;
+				box-shadow: unset;
+				border-color: transparent;
+                color: white;
+			}
+			.forgot-password-inner h4 {
+				text-align: center;
+				color: #22c55e;
+                margin: 20px 0 30px 0;
+			}
+			.forgot-password-inner span {
+				color: red;
+			}
+
+			.forgot-password-inner .form-label {
+				color: #15803d;
+				font-weight: 600;
+			}
+			.forgot-password-inner .form-image {
+				width: 200px;
+				margin: 0 auto;
+			}
+			.forgot-password-inner .form-image img {
+				width: 100%;
+                box-shadow: 1px 1px 4px rgb(209, 209, 209);
+			}
+			.forgot-password-inner .verify {
+				width: 100%;
+				background-color: #86efac;
+				color: white;
+			}
+			.forgot-password-inner .verify:hover {
+				background-color: #22c55e;
+			}
+			.forgot-password-inner a {
+				background-color: #86efac;
+				padding: 8px 20px;
+				display: inline-block;
+				margin: 20px auto;
+				text-decoration: none;
+				color: white;
+				border-radius: 5px;
+				width: 250px;
+				justify-content: center;
+				display: flex;
+			}
+			.forgot-password-inner a:hover {
+				background-color: #22c55e;
+			}
+            @media (min-width: 300px) and (max-width: 600px) {
+                .forgot-password-inner {
+
+				width: 300px;
+
+			}
+             }
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="forgot-password-wrapper">
+			<div class="forgot-password-inner">
+				<div class="form-header">
+					<div class="form-image">
+						<img src="https://100014.pythonanywhere.com/static/img/main_logo(1).jpg" alt="" />
+					</div>
+					<h4>Delete Account</h4>
+				</div>
+				<form  method="post" id="main">
+					{% csrf_token %}
+					<div class="mb-3">
+						<label class="form-label">UserName <span>*</span> </label>
+						<input
+							type="text"
+							class="form-control"
+							id="username"
+							placeholder="Enter Your Username"
+							required
+						/>
+
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Password <span>*</span> </label>
+						<input
+							type="password"
+
+							class="form-control"
+							id="password"
+							placeholder="Enter Your Password"
+							required
+						/>
+
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Status <span>*</span> </label>
+						<select id="status" class="form-select" aria-label="Default select example">
+							<option selected>Select</option>
+							<option value="inactive">Inactive</option>
+							<option value="deleted">Delete</option>
+						</select>
+					</div>
+					<button type="submit" id="main_button" class="btn verify">Make change</button>
+				</form>
+
+			</div>
+			<center><span style="margin-top:5%;font-size:larger" id="output"></span></center>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<script>
+		$('#main').on('submit', function (e) {
+		    $('#output').css('display','none');
+		    e.preventDefault();
+			// function sendfunction(){
+					$.ajax({
+						type: "POST",
+						url: "{% url 'removeaccount' %}",
+						data:{
+							username: $('#username').val(),
+							password: $('#password').val(),
+							status: $('#status').val(),
+							csrfmiddlewaretoken: '{{ csrf_token }}',
+							dataType: "json",
+						},
+						success: function (data) {
+							if(data.msg == "success"){
+							    $('#output').css('color','green');
+							    $('#output').html(data.info);
+							    $('#output').css('display','inline');
+							    $('#output').val(data.info);
+							}else{
+							    $('#output').css('color','red');
+							    $('#output').html(data.info);
+							    $('#output').css('display','inline');
+							    $('#output').val(data.info);
+							}
+						},
+						failure: function (data) {
+							console.log(data);
+							console.log("Failure");
+						}
+					});
+			// }
+		});
+		</script>
+	</body>
+</html>

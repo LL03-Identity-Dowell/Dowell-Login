@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wellcome-screen-wrapper {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        font-family: sans-serif;
+      }
+      .wellcome-screen-inner {
+        background-color: #f2f2f2;
+        width: 500px;
+        border: 1px solid rgb(184, 184, 184);
+        box-shadow: 1px 1px 1px rgb(206, 206, 206);
+        padding: 20px;
+        text-align: center;
+        box-sizing: content-box;
+      }
+      .wellcome-screen-inner h3 {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .wellcome-screen-inner p {
+        font-size: 17px;
+      }
+      .wellcome-screen-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wellcome-screen-links a {
+        width: 150px;
+        background-color: #157347;
+        margin: 0 10px;
+        padding: 10px 0;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px rgb(190, 190, 190);
+      }
+      .wellcome-screen-links a:last-child {
+        background-color: #bb2d3b;
+      }
+      .wellcome-screen-inner iframe {
+        width: 100%;
+      }
+      @media (min-width: 315px) and (max-width: 610px) {
+        .wellcome-screen-inner {
+          width: 300px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wellcome-screen-wrapper">
+      <div class="wellcome-screen-inner">
+        <h3>Hi {{user}} , Welcome to UX LivingLab</h3>
+        <p>You have created your account successfully</p>
+        <p>Do you Want to Login Now?</p>
+        <div class="wellcome-screen-links">
+          <!-- <a href="{% url 'login' %}">Login</a> -->
+          <a href="https://100014.pythonanywhere.com">Login</a>
+          <a href="https://100014.pythonanywhere.com/mobile_register">Cancel</a>
+        </div>
+
+        <!--<p>How do you rate this experience</p>-->
+        <!--<div class="wellcome-screen-rate">-->
+        <!--	<iframe-->
+        <!--		src="https://100035.pythonanywhere.com/likert/likert-scale1/SignUp8453?brand_name=your_brand&product_name=your_product/1"-->
+        <!--		frameborder="0"-->
+        <!--	></iframe>-->
+        <!--</div>-->
+      </div>
+    </div>
+  </body>
+</html>

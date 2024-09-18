@@ -1,0 +1,129 @@
+{
+  "document_name": "",
+  "Username":"user",
+  "profile_info": {
+    "first_name": "",
+    "last_name": "",
+    "profile_img": "http://100014.pythonanywhere.com/media/user.png",
+    "email": "gautamroshan4004@gmail.com",
+    "phonecode": "+91",
+    "phone": ""
+  },
+  "organisations": [
+    {
+      "org_name": "",
+      "level1": {
+        "level_name": "level1",
+        "items": [],
+        "roles": []
+      },
+      "level2": {
+        "level_name": "level2",
+        "items": [],
+        "roles": []
+      },
+      "level3": {
+        "level_name": "level3",
+        "items": [],
+        "roles": []
+      },
+      "level4": {
+        "level_name": "level4",
+        "items": [],
+        "roles": []
+      },
+      "level5": {
+        "level_name": "level5",
+        "items": [],
+        "roles": []
+      }
+    }
+  ],
+  "products": ["Workflow AI", "Digital Q", "Wifi QR Code", "Chat","UX Live","Social Media Automation","Scales","Logo Scan","Legalzard","Maps","Customer Experience","Living Lab Admin","Team Management","Monitoring","Live Stream Dashboard","Sales Agent","Permutation Calculator","Customer Support Centre","Secure Repositories","Secure Data"],
+  "members": {
+    "team_members": {
+      "accept_members": [
+        {
+          "name": "owner",
+          "first_name": "",
+          "last_name": "",
+          "email": ""
+        }
+      ],
+      "pending_members": []
+    },
+    "guest_members": {
+      "accept_members": [],
+      "pending_members": []
+    },
+    "public_members": {
+      "accept_members": [],
+      "pending_members": []
+    }
+  },
+  "portpolio": [],
+  "security_layers": {
+    "layer1": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer2": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer3": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer4": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer5": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer6": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    }
+  },
+  "other_organisation": [],
+  "roles": []
+}

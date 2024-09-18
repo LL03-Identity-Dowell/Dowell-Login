@@ -1,0 +1,287 @@
+#navBar{
+    background-color: #54595f;
+    border-radius: 5px;
+}
+.navBtn{
+    background-color: #7a7a7a !important;
+    color: #69ce70 !important;
+    height: 46px !important;
+    /* padding: 12px 24px; */
+    font-size: 14px !important;
+    font-family: sans-serif,'Roboto' !important;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #54595f;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 1px 1px 3px 0px rgba(255, 9.999999999999964, 0, 0.65);
+    /* margin-left: 5px; */
+}
+.navBtn:hover{
+    color: white !important;
+    background-color: #69ce70 !important;
+}
+.navBtn[class~="active"]{
+    color: white !important;
+    background-color: #69ce70 !important;
+}
+#rightCard{
+    background-color: #fffcde;
+}
+#pills-chat{
+    box-shadow: inset;
+}
+.alertBox{
+    background-color: #61ce70;
+    text-align: center;
+    color: white;
+    padding: 2px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin-top: 10px;
+    font-style:oblique;
+    width: 90%;
+    margin-left: auto;
+    margin-right:auto ;
+    font-size: 18px;
+    line-height: 1.3em;
+    font-weight: 400;
+    border-radius: 15px;
+    border-style: none;
+    margin: 10px 20px 10px 20px;
+    padding: 5px;
+}
+.memberBox{
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  border-style: none;
+  padding: 18px;
+  margin: 0px 20px 0px 20px;
+  background-color: #61ce70;
+  text-align: center;
+  color: white;
+}
+#chatWindowBtn{
+    color: #79ce70;
+    background-color: #f5f5f5;
+}
+.accordion{
+    border: 1px solid #79ce70;
+}
+.accordion-header{
+    border-bottom: 1px solid #79ce70;
+}
+#chatList > li{
+    font-size: 20px;
+    color: #7a7a7a;
+    font-weight: 400;
+}
+body {
+    font-family: 'Poppins',sans-serif;
+}
+.accordion-body{
+    background-color: #fffcde;
+}
+#pageEmbed{
+    width: 100%;
+    height: 232px;
+}
+.containerFrame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+  }
+  
+  .responsiveiframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  #loginBtn{
+    width: 100%;
+  }
+  @media (min-width: 667px){
+  .navBtn {
+      width: 100%;
+  }
+}
+@media (max-width: 667px){
+    .navBtn {
+        width: 100%;
+    }
+  }
+  .formStyles{
+    font-style: normal;
+    color: #7a7a7a;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @media (max-width: 767px){
+    .mainCol {
+        display: flex;
+        flex-flow: column-reverse;
+    }
+  }
+  @media screen and (max-width: 1024px) and (min-width:769px){
+    .mainCol {
+        display: flex;
+        flex-flow:row-reverse;
+    }
+  }
+  /* .mainCol{
+    position: absolute;
+    height: min-content;
+  } */
+  .firstImage{
+    text-align: center;
+    border: 1px solid black;
+  }
+  .form-check{
+    padding-left: 0px;
+  }
+  .checkText{
+    color: #038635;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 1%;
+  }
+  .policyLink{
+    color: black;
+    text-decoration: none;
+  }
+  .joinMemberBtn{
+    background-color: #61ce70;
+    border: 1px solid black;
+    color: white;
+    border-radius: 0px;
+  }
+  .joinMemberBtn:hover{
+    background-color: #198754;
+    color: white;
+  }
+  .haveAccountBtn{
+    width: 80%;
+    background-color: #97c99e !important;
+  }
+  .memberHeading{
+    color: #61CE70;
+    font-family: "Roboto", Sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .form-control{
+    border-color: #0A8303;
+    color: #7a7a7a;
+    border-radius: 0.2rem;
+  }
+  .forgotPasswordHead{
+    color: #61CE70;
+    font-family: "Roboto", Sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .forgotTagline{
+    font-family: 'Roboto', Sans-serif;
+    font-weight: 400;
+    color: #038625;
+    font-style: italic;
+    font-size: 18px;
+  }
+  .linkStyles{
+    font-weight: bold;
+    color: black;
+  }
+  .linkStyles:hover{
+    color: #7a7a7a
+  }
+  #username1{
+    background-color: #f5f5f5;
+    color: #ababab;
+    font-weight: bold;
+    border-color: #7a7a7a;
+  }
+  #password1{
+    background-color: #f5f5f5;
+    color: #ababab;
+    font-weight: bold;
+    border-color: #7a7a7a;
+  }
+  .rightBox{
+    border: 1px solid #61ce70;
+  }
+  .leftBox{
+    border: 1px solid black;
+  }
+  #cardBody{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  .formCard{
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+background: transparent;
+padding: 20px 25px 25px 25px;
+border-radius: 0px;
+margin-bottom: 20px;
+  }
+  .box{
+    border: 1px solid #61CE70;
+    padding: 5px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .chatBox{
+    margin: 0;
+    padding: 15px 20px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #61CE70;
+    margin-top: 15px;
+  }
+  .navBtn:hover{
+    padding: 0px;
+  }
+  .form-label{
+    font-weight: 700;
+    color: #7a7a7a;
+    cursor: pointer;
+    font-size: 14px;
+    
+  }
+  @media screen and (min-width: 992px) and (max-width: 772px) {
+#rightCard {
+    flex: 0 0 auto;
+    width: 65%;
+}
+  }
+@media screen and (max-width:1024px) and (min-width: 768px) {
+  .firstImage{
+    width: 15%;
+    margin-left: 5px;
+  }
+}
+@media screen and (min-width:1024px){
+  .firstImage{
+    width: 15%;
+    margin-right:5px;
+  }
+}
+  .langLabel{
+    font-size: 16px;
+    color: #7a7a7a;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .loginBtn{
+    font-size: 13px;
+    /* padding: 10px 20px; */
+    border-radius: 2px;
+  }

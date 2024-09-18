@@ -1,0 +1,129 @@
+{
+  "document_name": "Roshan_4004",
+  "Username":"user",
+  "profile_info": {
+    "first_name": "Roshan",
+    "last_name": "",
+    "profile_img": "http://100014.pythonanywhere.com/media/user.png",
+    "email": "gautamroshan4004@gmail.com",
+    "phonecode": "+91",
+    "phone": ""
+  },
+  "organisations": [
+    {
+      "org_name": "Roshan_4004",
+      "level1": {
+        "level_name": "level1",
+        "items": [{"item_name": "default", "item_code": "1", "item_details": "default", "item_universal_code": "default", "item_specification": "default", "item_barcode": "", "item_image1": "", "item_image2": ""}],
+        "roles": []
+      },
+      "level2": {
+        "level_name": "level2",
+        "items": [],
+        "roles": []
+      },
+      "level3": {
+        "level_name": "level3",
+        "items": [],
+        "roles": []
+      },
+      "level4": {
+        "level_name": "level4",
+        "items": [],
+        "roles": []
+      },
+      "level5": {
+        "level_name": "level5",
+        "items": [],
+        "roles": []
+      }
+    }
+  ],
+  "products": ["Workflow AI", "Digital Queue", "Wifi QR Code", "Living Lab Chat","User Experience Live","Social Media Automation","Living Lab Scales","Logo Scan","Legalzard","Living Lab Maps","Customer Experience","Living Lab Admin","Team Management","Living Lab Monitoring","Live Stream Dashboard","Sales Agent","Permutation Calculator","Dowell Customer Support Centre","Secure Repositories","Secure Data"],
+  "members": {
+    "team_members": {
+      "accept_members": [
+        {
+          "name": "owner",
+          "first_name": "Roshan",
+          "last_name": "",
+          "email": "gautamroshan4004@gmail.com"
+        }
+      ],
+      "pending_members": []
+    },
+    "guest_members": {
+      "accept_members": [],
+      "pending_members": []
+    },
+    "public_members": {
+      "accept_members": [],
+      "pending_members": []
+    }
+  },
+  "portpolio": [],
+  "security_layers": {
+    "layer1": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer2": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer3": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer4": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer5": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    },
+    "layer6": {
+      "devices": [],
+      "os": [],
+      "browsers": [],
+      "connection_type": [],
+      "location": {
+        "IN": [],
+        "AUS": []
+      }
+    }
+  },
+  "other_organisation": [],
+  "roles": [{"level1_item": "default", "level2_item": "", "level3_item": "", "level4_item": "", "level5_item": "", "security_layer": "SecurityLayer1", "role_name": "default", "role_code": "01", "role_details": "default", "role_uni_code": "default", "role_specification": "default"}]
+}
